@@ -96,7 +96,6 @@ textarea {
    ========================================================================== */
 
 
-
 /* ##################################################################### */
 /* ##########################   SMARTPHONE   ########################### */
 /* ##################################################################### */
@@ -131,9 +130,25 @@ textarea {
 
 
 
+h1{
+  text-align: center;
 
+}
 
+header{
+  background-color: black;
+  height: 80px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
 
+/*footer{
+  background-color: black;
+  height: 80px;
+  color: white;
+  margin-top: auto;
+  font-family: 'Playfair Display', serif;
+}*/
 
 
 
