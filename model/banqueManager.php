@@ -16,7 +16,7 @@ class BanqueManager
         $accounts=$response->fetchAll();
         return $accounts;
     }
-    
+
     public function addAccount($account)
     {
         $response = $this->getBdd()->prepare("INSERT INTO ExoBanque (name,amount,type) VALUES (:name,:amount,:type)");
@@ -25,6 +25,14 @@ class BanqueManager
         "amount"=>$account->getAmount(),
         "type"=>$account->getType(),
 
+      ));
+    }
+
+    public function getAccount(Banque $account)
+    {
+        $response= $this->getBdd()->prepare("SELECT * FROM exoBanque WHERE id");
+        $response->execute(array(
+        "id"=>$account->getId(),
       ));
     }
 }

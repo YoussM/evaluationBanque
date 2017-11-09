@@ -12,7 +12,7 @@ $manager= new BanqueManager;
 
 $accounts= $manager->getAllAccount();
 foreach ($accounts as $key => $value) {
-    $accounts[$key]=new banque($value);
+    $accounts[$key]=new Banque($value);
 }
 
 
