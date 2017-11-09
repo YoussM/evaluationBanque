@@ -63,7 +63,7 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <?php foreach ($accounts as $key => $value): ?>
 
-            <a class="dropdown-item" href="controleurCompte.php?id=<?php echo $value->getId()?>"><?php echo $value->getName() ?></a>
+            <a class="dropdown-item" href="thisAccount.php?id=<?php echo $value->getId()?>"><?php echo $value->getName() ?></a>
         <?php endforeach; ?>
 
 

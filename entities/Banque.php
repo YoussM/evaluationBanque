@@ -1,5 +1,5 @@
 <?php
-
+// creat class
 class Banque
 {
     protected $id;
@@ -7,12 +7,12 @@ class Banque
     protected $amount;
     protected $type;
 
-
+    // creat function construct
     public function __construct($data)
     {
         $this->hydrate($data);
     }
-
+    // creat function hydrate and while
     public function hydrate(array $account)
     {
         foreach ($account as $key => $value) {
@@ -23,7 +23,7 @@ class Banque
         }
     }
 
-
+    // creat all function getter and setter
     /**
      * Get the value of Name
      *

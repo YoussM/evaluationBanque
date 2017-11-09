@@ -7,7 +7,7 @@ spl_autoload_register("loadClass");
 
 require("../model/banqueManager.php");
 
-
+// creat new object banqueManager
 $manager= new BanqueManager;
 
 $accounts= $manager->getAllAccount();

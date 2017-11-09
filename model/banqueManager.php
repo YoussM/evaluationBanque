@@ -2,6 +2,7 @@
 
 class BanqueManager
 {
+    // function to add and bdd
     public function getBdd()
     {
         $bdd = new PDO('mysql:host=localhost;dbname=EvaluationBanque;charset=utf8', 'root', 'root');
@@ -9,14 +10,14 @@ class BanqueManager
         return $bdd;
     }
 
-
+    // function to get and bdd a table
     public function getAllAccount()
     {
         $response = $this->getBdd()->query("SELECT * FROM ExoBanque");
         $accounts=$response->fetchAll();
         return $accounts;
     }
-
+    // function to insert and bdd
     public function addAccount($account)
     {
         $response = $this->getBdd()->prepare("INSERT INTO ExoBanque (name,amount,type) VALUES (:name,:amount,:type)");
@@ -28,11 +29,14 @@ class BanqueManager
       ));
     }
 
-    public function getAccount(Banque $account)
+    // function get account and bdd as recup id now
+    public function getAccount($account)
     {
-        $response= $this->getBdd()->prepare("SELECT * FROM exoBanque WHERE id");
+        $response= $this->getBdd()->prepare("SELECT * FROM exoBanque WHERE id= :id");
         $response->execute(array(
         "id"=>$account->getId(),
+
       ));
+        return $account = $response->fetch();
     }
 }
