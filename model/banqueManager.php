@@ -18,7 +18,7 @@ class BanqueManager
         return $accounts;
     }
     // function to insert and bdd
-    public function addAccount($account)
+    public function addAccount(Banque $account)
     {
         $response = $this->getBdd()->prepare("INSERT INTO ExoBanque (name,amount,type) VALUES (:name,:amount,:type)");
         $response->execute(array(
@@ -30,7 +30,7 @@ class BanqueManager
     }
 
     // function get account and bdd as recup id now
-    public function getAccount($account)
+    public function getAccount(Banque $account)
     {
         $response= $this->getBdd()->prepare("SELECT * FROM exoBanque WHERE id= :id");
         $response->execute(array(
@@ -38,5 +38,23 @@ class BanqueManager
 
       ));
         return $account = $response->fetch();
+    }
+
+    public function delete(Banque $account)
+    {
+        $req=$this->getBdd()->prepare("DELETE FROM exoBanque WHERE id=:id");
+        $req->execute(
+            [
+        "id"=>$account->getId()]
+      );
+    }
+
+    public function update(Banque $account)
+    {
+        $req=$this->getBdd()->prepare("UPDATE banque SET amount=:amount WHERE id=:id");
+        $req->execute(array(
+        "id"=>$account->getId(),
+        "amount"=>$account->getAmount()
+      ));
     }
 }

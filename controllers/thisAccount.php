@@ -12,4 +12,11 @@ $account = new Banque($_GET);
 $account = $manager->getAccount($account);
 $account = new Banque($account);
 
+if (isset($_POST["delete"])) {
+    $manager->delete($account);
+    header("Location:index.php");
+}
+
+
+
 include "../views/accountVue.php";

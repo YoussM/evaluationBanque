@@ -24,4 +24,6 @@ if (isset($_POST["button"])) {
     header("refresh:0");
 }
 
+
+
 include "../views/indexVue.php";

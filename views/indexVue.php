@@ -31,29 +31,14 @@
   </div>
 </div>
 
+  <button class= "btn btn-primary" type="submit" name="button" id="btn">send</button>
 
-      <!-- <div class="form-group">
-      <label class="control-label col-sm-2" for="name">Colors:</label>
-      <div class="col-sm-10">
-        <input class="form-control" type="text" name="color" value=""placeholder="color">
-      </div>
-      </div>
-      <div class="form-group">
-      <label class="control-label col-sm-2" for="name">Price:</label>
-      <div class="col-sm-10">
-        <input class="form-control" type="text" name="price" value=""placeholder="price">
-      </div>
-      </div>
-      <div class="form-group">
-      <label class="control-label col-sm-2" for="name">Description:</label>
-      <div class="col-sm-10">
-        <input class="form-control" type="text" name="description" value=""placeholder="description">
-      </div>
-      </div> -->
-            <button class= "btn btn-primary" type="submit" name="button" id="btn">send</button>
-          </form>
-        </div>
-      </div>
+    <button type="submit" name="delete">delete</button>
+
+
+      </form>
+    </div>
+  </div>
     </div>
 
     <div class="dropdown">
@@ -62,7 +47,6 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <?php foreach ($accounts as $key => $value): ?>
-
             <a class="dropdown-item" href="thisAccount.php?id=<?php echo $value->getId()?>"><?php echo $value->getName() ?></a>
         <?php endforeach; ?>
 
