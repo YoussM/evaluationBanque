@@ -32,26 +32,26 @@ class BanqueManager
     // function get account and bdd as recup id now
     public function getAccount(Banque $account)
     {
-        $response= $this->getBdd()->prepare("SELECT * FROM exoBanque WHERE id= :id");
+        $response= $this->getBdd()->prepare("SELECT * FROM ExoBanque WHERE id= :id");
         $response->execute(array(
         "id"=>$account->getId(),
 
       ));
         return $account = $response->fetch();
     }
-
+    // function delete account
     public function delete(Banque $account)
     {
-        $req=$this->getBdd()->prepare("DELETE FROM exoBanque WHERE id=:id");
+        $req=$this->getBdd()->prepare("DELETE FROM ExoBanque WHERE id=:id");
         $req->execute(
             [
         "id"=>$account->getId()]
       );
     }
-
+    // function update account
     public function update(Banque $account)
     {
-        $req=$this->getBdd()->prepare("UPDATE banque SET amount=:amount WHERE id=:id");
+        $req=$this->getBdd()->prepare("UPDATE ExoBanque SET amount=:amount WHERE id=:id");
         $req->execute(array(
         "id"=>$account->getId(),
         "amount"=>$account->getAmount()

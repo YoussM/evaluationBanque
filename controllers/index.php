@@ -15,7 +15,7 @@ foreach ($accounts as $key => $value) {
     $accounts[$key]=new Banque($value);
 }
 
-
+// condition for add account
 if (isset($_POST["button"])) {
     $banque= new Banque($_POST);
 

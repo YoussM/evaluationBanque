@@ -120,4 +120,11 @@ class Banque
 
         return $this;
     }
+
+    public function add($addAmount)
+    {
+        $this->amount += $addAmount;
+
+        return $this;
+    }
 }
