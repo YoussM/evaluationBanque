@@ -132,7 +132,6 @@ textarea {
 
 h1{
   text-align: center;
-
 }
 
 header{
@@ -141,6 +140,27 @@ header{
   color: white;
   font-family: 'Playfair Display', serif;
 }
+
+.carte{
+  margin: auto;
+  background-color:;
+  margin-top: 100px;
+}
+
+.dropdown{
+margin-top: 10px;
+}
+
+.btn{
+  margin-top: 10px;
+}
+
+input{
+  text-align: center;
+}
+
+
+
 
 /*footer{
   background-color: black;

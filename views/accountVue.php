@@ -9,19 +9,29 @@
     <title></title>
   </head>
   <body>
-
-    <p><?php echo $account->getName()?></p>
-    <p><?php echo $account->getType()?></p>
-    <p><?php echo $account->getAmount()?></p>
+    <div class="card carte" style="width: 20rem;" >
+      <input type="text" name="" value="<?php echo $account->getName()?>" readonly="">
+      <input type="text" name="" value="<?php echo $account->getType()?>" readonly="" >
+      <input type="text" name="" value="<?php echo $account->getAmount()?>" readonly="" >
+    <div class="card-body">
 
     <form class=""  method="post">
-      <button type="submit" name="delete">delete</button>
+      <button type="submit" name="addAmount"class="btn btn-outline-primary" id="">Add</button>
+      <input name="add" type="number" step="0.01"id="add">
     </form>
 
     <form class=""  method="post">
-      <button type="submit" name="addAmount"></button>
-      <input name="add" type="number" step="0.01">
+      <button type="submit" name="suppAmount"class="btn btn-outline-info" id="">Back</button>
+      <input name="supp" type="number" step="0.01" id="supp">
     </form>
+
+    <form class=""  method="post">
+      <button type="submit" name="delete"class="btn btn-outline-danger" id="">Delete</button>
+    </form>
+
+
+  </div>
+  </div>
 
   </body>
 </html>

@@ -23,9 +23,12 @@ if (isset($_POST["addAmount"])) {
     $account->add($_POST["add"]);
 
     $manager->update($account);
-
-    // header("location:accountVue.php");
 }
+// condition for back amount and account
+if (isset($_POST["suppAmount"])) {
+    $account->supp($_POST["supp"]);
 
+    $manager->update($account);
+}
 
 include "../views/accountVue.php";

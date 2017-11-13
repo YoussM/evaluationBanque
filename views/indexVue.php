@@ -2,7 +2,7 @@
   include("template/header.php")
  ?>
 
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Add Account</button>
+  <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target=".bd-example-modal-sm" >Add Account</button>
 
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
@@ -20,6 +20,8 @@
           <select class="" name="type" id="type" required>
             <option value="Pel">PEL</option>
             <option value="Cheque">Chèque</option>
+            <option value="Epargne">Epargne</option>
+
           </select>
         </div>
       </div>

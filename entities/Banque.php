@@ -127,4 +127,11 @@ class Banque
 
         return $this;
     }
+
+    public function supp($suppAmount)
+    {
+        $this->amount -= $suppAmount;
+
+        return $this;
+    }
 }
