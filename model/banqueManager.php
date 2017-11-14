@@ -5,7 +5,7 @@ class BanqueManager
     // function to add and bdd
     public function getBdd()
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=EvaluationBanque;charset=utf8', 'root', 'root');
+        $bdd = new PDO('mysql:host=localhost;dbname=EvaluationBanque;charset=utf8');
         $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $bdd;
     }

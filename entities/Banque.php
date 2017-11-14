@@ -98,7 +98,7 @@ class Banque
      */
     public function setType($type)
     {
-        if (in_array($type, [pel,chèque,epargne])) {
+        if (in_array($type, ["PEL","Chèque","Epargne"])) {
         }
         $this->type = $type;
 
