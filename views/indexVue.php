@@ -33,9 +33,9 @@
   </div>
 </div>
 
-  <button class= "btn btn-primary" type="submit" name="button" id="btn">send</button>
+  <button class= "btn btn-primary" type="submit" name="button" id="btn-send">send</button>
 
-    <button type="submit" name="delete">delete</button>
+    <button class= "btn btn-danger" type="submit" name="delete" id="btn-delete">delete</button>
 
 
       </form>

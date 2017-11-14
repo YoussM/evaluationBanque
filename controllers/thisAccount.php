@@ -11,6 +11,7 @@ $manager = new BanqueManager;
 $account = new Banque($_GET);
 $account = $manager->getAccount($account);
 $account = new Banque($account);
+$accounts = $manager->getAllAccount();
 
 // condition for delete account
 if (isset($_POST["delete"])) {
@@ -30,5 +31,25 @@ if (isset($_POST["suppAmount"])) {
 
     $manager->update($account);
 }
+// condition for credited account
+if (isset($_POST["creditedb"])) {
+    $data['id'] = $_POST['credited'];
+    $acc = new Banque($data);
+    $acc = $manager->getAccount($acc);
+    $acc = new Banque($acc);
+    $acc->supp($_POST['cred']);
+    $manager->update($acc);
+
+    // condition for debited account
+    $data['id'] = $_POST['debited'];
+    $acc = new Banque($data);
+    $acc = $manager->getAccount($acc);
+    $acc = new Banque($acc);
+    $acc->add($_POST['cred']);
+    $manager->update($acc);
+
+    header("refresh:0");
+}
+
 
 include "../views/accountVue.php";

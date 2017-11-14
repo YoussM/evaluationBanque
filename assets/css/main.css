@@ -154,6 +154,10 @@ margin-top: 10px;
 .btn{
   margin-top: 10px;
 }
+/*#btn-send{
+  margin-left: 20px;
+  margin-bottom: 15px;
+}*/
 
 input{
   text-align: center;
@@ -161,14 +165,6 @@ input{
 
 
 
-
-/*footer{
-  background-color: black;
-  height: 80px;
-  color: white;
-  margin-top: auto;
-  font-family: 'Playfair Display', serif;
-}*/
 
 
 
