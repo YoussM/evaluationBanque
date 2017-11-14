@@ -43,6 +43,9 @@ class Banque
      */
     public function setName($name)
     {
+        if (is_string($name)) {
+            $this->name = $name;
+        }
         $this->name = $name;
 
         return $this;
@@ -67,6 +70,9 @@ class Banque
      */
     public function setAmount($amount)
     {
+        if ($amount >0 && $amount < 20000000) {
+            $this->amount = $amount;
+        }
         $this->amount = $amount;
 
         return $this;
@@ -92,6 +98,8 @@ class Banque
      */
     public function setType($type)
     {
+        if (in_array($type, [pel,chèque,epargne])) {
+        }
         $this->type = $type;
 
         return $this;
@@ -121,13 +129,14 @@ class Banque
         return $this;
     }
 
+    // creation of the add function
     public function add($addAmount)
     {
         $this->amount += $addAmount;
 
         return $this;
     }
-
+    // creation of the supp function
     public function supp($suppAmount)
     {
         $this->amount -= $suppAmount;
